@@ -1,0 +1,22 @@
+{
+  "name": "volu-game",
+  "version": "1.0.0",
+  "description": "Fun game for volumetrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Davis",
+  "license": "ISC",
+  "dependencies": {
+    "component-emitter": "github:component/emitter",
+    "es6-event-emitter": "^1.10.2",
+    "peerjs": "^1.5.1",
+    "three": "^0.156.1",
+    "troika-three-text": "^0.48.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9"
+  }
+}

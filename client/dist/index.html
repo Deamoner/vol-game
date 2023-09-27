@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Volu-gaming</title>
+		<style>
+			body { margin: 0; }
+            .info {
+                position: absolute;
+                color: white;
+                top: 40%;
+                width: 100%;
+                text-align: center;
+                z-index: 100;
+                display:block;
+            }
+            .scoreboards {
+                position: absolute;
+                color: white;
+                background-color: blue;
+                top: 5px;
+                right: 0px;
+                max-width: 110px;
+                text-align: center;
+                z-index: 100;
+                display:block;
+            }
+            .scoreboard {
+                position: absolute;
+                color: white;
+                width: 100%;
+                text-align: center;
+                top: 10px;
+                z-index: 100;
+                display:block;
+            }
+            #menu {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 200px;
+                height: 200px;
+                background-color: rgba(255, 253, 253, 0.5);
+                z-index: 1000;
+                display: flex;
+            }
+            #menu-container {
+                margin: auto;
+                text-align: center;
+            }
+		</style>
+         <script src="https://unpkg.com/component-emitter@1.3.0/index.js"></script>
+        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+        
+		<script type="module" crossorigin src="/assets/index-a077a1a9.js"></script>
+	</head>
+	<body>
+        <div id="nameinput" class="info"> 
+            Welcome to Volu-gaming multiplayer head to head typing game. <br>
+            p2p typing and taunting challenge. Your letters are green, your oppoents are purple. <br>
+            Taught your opponents over video/audio so they lose first.
+            <br>
+            Missing 3 letters in a row will end your game.
+            <br>
+            Enter your name to join the room:
+            <br>
+            <br>
+            <input id="name" type="text" placeholder="Name" />
+            <button id="nameinputbtn">Enter</button>
+        </div>
+        <div id="waiting" class="info" style="display:none"> 
+            Waiting on opponents...
+            <button id="readybtn">Ready Up</button>
+        </div>
+        <div id="scoreboards" class="scoreboards">
+            Scoreboards:
+            <br>
+
+        </div>
+        <div id="gameover" class="info" style="display:none"> 
+            Game Over
+            <br>
+            Score: <span id="finalscore"></span>
+            <br>
+        </div>
+        <div class="scoreboard">
+            Points: <span id="points">0</span>
+        </div>
+        <volu-game></volu-game>
+        
+	</body>
+</html>
