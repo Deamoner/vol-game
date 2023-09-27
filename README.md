@@ -15,7 +15,7 @@ npm install
 
 ## Start the App Locally:
 
-``` bash
+```bash
 cd volu-game
 npm run start
 ```
@@ -44,6 +44,5 @@ Volu-Game is built using the following technologies:
 - [Node.js](https://nodejs.org/en/) - A JavaScript runtime built on Chrome's V8 JavaScript engine.
 - [Express.js](https://expressjs.com/) - A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 - [Socket.io](https://socket.io/) - A JavaScript library for realtime web applications. It enables realtime, bi-directional communication between web clients and servers.
-
 
 Enjoy playing Volu-Game, and may your typing skills and strategic thinking lead you to victory! If you have any questions or encounter any issues, please don't hesitate to reach out to us.
