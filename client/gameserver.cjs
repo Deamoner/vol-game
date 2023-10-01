@@ -1,4 +1,3 @@
-import { serverAddress } from "./constants.js";
 import { PeerUser } from "./peeruser.cjs";
 import Emitter from "component-emitter";
 import { Peer } from "peerjs";
@@ -72,7 +71,7 @@ export class GameServer extends Emitter {
    * @see {@link https://socket.io/docs/v3/emit-cheatsheet/} - Socket.io emit cheatsheet
    */
   initprofile() {
-    this.socket.emit("joinprofile", { name: this.name, score: this.score });
+    this.socket.emit("joinprofile", { name: this.name, score: this.score, status: this.ready });
   }
 
   /**

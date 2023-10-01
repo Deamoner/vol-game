@@ -16,6 +16,7 @@ class VoluGameApp extends HTMLElement {
   appstate = "loading"; // initializing, objectloading, waitingonname, waitingonopponents, serverloading, loaded, waitinplayersgready, startinggame, remotestarted, gamestarted
   name = null; // The name of the user gotten from the ui
   frameCallback = null; // The callback to call on each frame render by objects such as the compartmentalized game object
+  someoneOnline = false; // Flag to check if someone is online
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -177,6 +178,8 @@ class VoluGameApp extends HTMLElement {
     this.name = name;
     document.getElementById("nameinput").style.display = "none";
     document.getElementById("waiting").style.display = "block";
+    const readybtn = document.getElementById("readybtn");
+    readybtn.disabled = true;
     this.setAppState("serverloading");
   }
 
@@ -302,6 +305,9 @@ class VoluGameApp extends HTMLElement {
    * @memberof VoluGameApp
    */
   p2pUserOnlineCallback(data) {
+    this.someoneOnline = true;
+    const readybtn = document.getElementById("readybtn");
+    readybtn.disabled = false;
     this.addUserScoreboard(data);
   }
 

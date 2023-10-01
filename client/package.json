@@ -4,6 +4,7 @@
   "description": "Fun game for volumetrics",
   "main": "index.js",
   "scripts": {
+    "debug": "nodemon -e js --ignore dist/ --watch . --exec \"vite build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matthew Davis",

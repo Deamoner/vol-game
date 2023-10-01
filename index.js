@@ -25,19 +25,23 @@ let onlineUsers = {};
  */
 io.on("connection", (socket) => {
   console.log("a user connected");
+  
   socket.on("joinprofile", (data) => {
     socket.profile = data;
     onlineUsers[socket.id] = data;
     io.emit("userjoin", { uid: socket.id, profile: data });
   });
+
   socket.on("getroster", () => {
     console.log("got roster");
     socket.emit("roster", { roster: onlineUsers });
   });
+
   socket.on("disconnect", () => {
     delete onlineUsers[socket.id];
     io.emit("userleft", { uid: socket.id });
   });
+
 });
 
 server.listen(3000, () => {
