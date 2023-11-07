@@ -4,6 +4,7 @@ const { join } = require("node:path");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const { on } = require("node:events");
+const hazel = require('hazel-server')
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
@@ -12,7 +13,12 @@ const io = new Server(server, {
   },
 });
 app.use(cors());
-
+app.get("*", (req, res) => {
+  hazel({
+    account: "deamoner",
+    repository: "AROUpdateRepo",
+  })(req, res);
+});
 app.use(express.static(join(__dirname, "./client/dist")));
 
 let onlineUsers = {};
