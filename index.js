@@ -16,7 +16,7 @@ app.use(cors());
 app.get("*", (req, res) => {
   hazel({
     account: "deamoner",
-    repository: "AROUpdateRepo",
+    repository: "ARODesktop",
   })(req, res);
 });
 app.use(express.static(join(__dirname, "./client/dist")));
