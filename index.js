@@ -12,11 +12,15 @@ const io = new Server(server, {
     origin: "*",
   },
 });
+console.log(process.env.token)
 app.use(cors());
 app.get("*", (req, res) => {
   hazel({
-    account: "deamoner",
+    account: "Deamoner",
     repository: "ARODesktop",
+    token: process.env.token,
+    url: process.env.url,
+    pre: 1
   })(req, res);
 });
 app.use(express.static(join(__dirname, "./client/dist")));
