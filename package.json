@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "electron-hazel-update-server": "^5.1.1",
+    "electron-hazel-update-server": "^5.1.2",
     "express": "^4.18.2",
     "hazel-server": "^5.1.1",
     "socket.io": "^4.7.2"
