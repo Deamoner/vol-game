@@ -1,6 +1,6 @@
 {
   "name": "vol-game-server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Server for vol-game",
   "main": "index.js",
   "scripts": {
